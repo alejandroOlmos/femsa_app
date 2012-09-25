@@ -1,5 +1,10 @@
 FemsaApp::Application.routes.draw do
-  get "pages/home"
+
+  scope "/femsaapp" do
+    get "pages/home"
+    root :to => "pages#home"
+  end
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
